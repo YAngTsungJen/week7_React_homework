@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {RotatingTriangles} from "react-loader-spinner";
 import { Navigate } from 'react-router';
-import useMessage from '../../hooks/useMessage'
+import useMessage from '../hooks/useMessage';
 const {VITE_BASE_URL} = import.meta.env; 
 function ProtectedRoutes({children}){
     const [isAuth, setIsAuth] = useState(false);
