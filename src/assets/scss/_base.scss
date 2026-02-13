@@ -1,0 +1,68 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+	text-decoration: none !important;
+	display: block;
+  color: $black;
+}
+html {
+	font-size: $font-size-base;
+}
+body {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  height: 100%;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, p {
+  margin-bottom: 0;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: normal;
+}
+.fz-1{
+  font-size: 14px;
+}
+.fz-2{
+  font-size: 16px;
+}
+.fz-3{
+  font-size: 20px;
+}
+.fz-4{
+  font-size: 24px;
+}
+.fz-5{
+  font-size: 32px;
+}
+.fz-6{
+  font-size: 40px;
+}
+.lh-1{
+  line-height: 21px;
+}
+.lh-2{
+  line-height: 24px;
+}
+.lh-3{
+  line-height: 30px;
+}
+.lh-4{
+  line-height: 36px;
+}
+.lh-5{
+  line-height: 48px;
+}
+.lh-6{
+  line-height: 60px;
+}
+.w-30{
+  width: 30%;
+}
+.font-weight-bold{
+  font-weight: $font-weight-bold;
+}
+.font-weight-normal{
+  font-weight: $font-weight-normal;
+}

@@ -1,0 +1,14 @@
+.product-card{
+    cursor: pointer;
+}
+.product-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.category-item:hover .category-img,
+.product-card:hover .product-img {
+    transform: scale(1.1);
+}
+.category-img,
+.product-img {
+    transition: transform 0.6s ease;
+}

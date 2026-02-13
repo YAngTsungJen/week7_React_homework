@@ -1,0 +1,7 @@
+.breadcrumb-item {
+    white-space: nowrap; 
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    padding-right: 0.1rem;
+    padding-left: 0.5rem;
+}

@@ -1,0 +1,24 @@
+.table th {
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table td {
+  padding: 1.5rem 0.75rem;
+}
+
+.input-group .form-control {
+  max-width: 50px;
+  background-color: transparent;
+}
+
+.btn-dark:hover {
+  background-color: #d4a373;
+  border-color: #d4a373;
+  transition: 0.3s;
+}
+.border-dashed {
+  border: 2px dashed #dee2e6 !important;
+}
