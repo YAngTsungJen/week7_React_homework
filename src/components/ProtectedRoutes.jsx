@@ -2,10 +2,12 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {RotatingTriangles} from "react-loader-spinner";
 import { Navigate } from 'react-router';
-const {VITE_BASE_URL, VITE_API_PATH} = import.meta.env; 
+import useMessage from '../../hooks/useMessage'
+const {VITE_BASE_URL} = import.meta.env; 
 function ProtectedRoutes({children}){
     const [isAuth, setIsAuth] = useState(false);
     const [loading,setLoading] = useState(true);
+    const {showError} = useMessage();
     useEffect(()=>{
         const token = document.cookie.replace(
         /(?:(?:^|.*;\s*)onion\s*=\s*([^;]*).*$)|^.*$/,"$1",
@@ -15,18 +17,17 @@ function ProtectedRoutes({children}){
         }
         const checkLogin = async()=>{
         try {
-            const res = await axios.post(`${VITE_BASE_URL}/api/user/check`);
-            console.log(res);
+            await axios.post(`${VITE_BASE_URL}/api/user/check`);
             setIsAuth(true);
         } catch (error) {
-            console.log('驗證錯誤：請重新登入',error.response?.data.message)
+            showError(error.response?.data.message)
             setIsAuth(false);
         }finally{
             setLoading(false);
         }
     }
     checkLogin();
-    },[loading]);
+    },[loading,showError]);
     if(loading) {
         return(
         <div style={{
