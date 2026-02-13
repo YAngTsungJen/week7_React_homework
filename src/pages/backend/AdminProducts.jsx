@@ -2,7 +2,6 @@
 import { useEffect,useState ,useRef, useCallback} from "react"
 import axios from 'axios';
 import { Modal } from "bootstrap";
-// import Loading from "../components/Loading";
 import Pagination from "../../components/Pagination";
 import useMessage from '../../hooks/useMessage'
 // 環境變數
@@ -59,7 +58,7 @@ function  AdminProducts() {
     },[showError])
     useEffect(()=>{
         (async ()=>{getProducts()})();
-    },[getProducts])
+    },[])
     // Product Modal 開與關 
     const openModal = (type,product)=>{
         setModalType(type);

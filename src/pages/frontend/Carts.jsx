@@ -74,7 +74,7 @@ function Carts(){
         (async() => {
             getCart();
         })()
-    },[getCart])
+    },[])
     return (<>
             <Loading isLoading={isLoading} />
             <div className="container py-5">
